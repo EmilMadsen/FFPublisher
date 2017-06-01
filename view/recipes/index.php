@@ -44,6 +44,7 @@ if($_SESSION['loggedIn'] != true)
         include('../../model/recipe.php');
 
         $recipes = (new Recipe())->getRecipes();
+        var_dump($recipes);
         
         if (!is_null($recipes)) {
             foreach ($recipes as $recipe){
